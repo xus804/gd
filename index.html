@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas" width="800" height="400"></canvas>
+        
+        <div id="ui-layer">
+            <div id="main-menu" class="screen">
+                <h1>GEOMETRY CLONE</h1>
+                <p>Click, Spacebar, or Tap to Jump/Fly</p>
+                <div class="level-buttons">
+                    <button onclick="startGame(1)">Level 1 (Easy)</button>
+                    <button onclick="startGame(2)">Level 2 (Orbs)</button>
+                    <button onclick="startGame(3)">Level 3 (Ship)</button>
+                </div>
+            </div>
+            
+            <div id="game-over" class="screen hidden">
+                <h1 style="color: #ff4c4c;">ATTEMPT FAILED</h1>
+                <p id="progress-text">Progress: 0%</p>
+                <button onclick="restartLevel()">Try Again</button>
+                <button onclick="showMenu()">Main Menu</button>
+            </div>
+
+            <div id="level-complete" class="screen hidden">
+                <h1 style="color: #4cff4c;">LEVEL COMPLETE!</h1>
+                <button onclick="showMenu()">Main Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
